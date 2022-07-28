@@ -16,16 +16,18 @@
    <div class="container">
     <div class="row justify-content-between">
         <div class="col-5">
-            <h2 class="score d-inline">Recent Scores </h2> <a href="#" class="btn border ms-5 text-end" id="refresh">Refresh</a>
+            <h2 class="score d-inline">Recent Scores </h2> <a href="#" class="btn border ms-5 text-end" id="refresh" onclick="window.location.reload();">Refresh</a>
+           <div id = "tableContainer" class="h-50 border overflow-hidden">
             <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody id="tableBody">
-                </tbody>
-              </table>
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+              </tbody>
+            </table>
+           </div>
         </div>
         <div class="col-5">
             <h2 class="">Add your score </h2> 

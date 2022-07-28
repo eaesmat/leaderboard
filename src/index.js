@@ -4,12 +4,10 @@ import getData from './module/getData.js';
 document.querySelector('#submit').addEventListener('click', (e) => {
   e.preventDefault();
   addScore(document.querySelector('#name').value, Number(document.querySelector('#score').value));
+  document.querySelector('#name').value = '';
+  document.querySelector('#score').value = '';
 });
 
-document.querySelector('#refresh').addEventListener('click', (e) => {
-  e.preventDefault();
-  // eslint-disable-next-line no-restricted-globals
+document.addEventListener('DOMContentLoaded', () => {
   getData();
 });
-// eslint-disable-next-line no-restricted-globals
-// location.reload();
