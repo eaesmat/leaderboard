@@ -6,11 +6,13 @@ const getdata = async () => {
   const result = await data.json();
   const dataSet = result.result.sort((a, b) => b.score - a.score);
   dataSet.forEach((item) => {
+    // if (count < 10 && count === check) {
     const tr = document.createElement('tr');
     table.appendChild(tr);
     const td = document.createElement('td');
     td.innerHTML = `${item.user}:   ${item.score}`;
     tr.appendChild(td);
+    // }
   });
 };
 export default getdata;
