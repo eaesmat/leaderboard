@@ -1,15 +1,13 @@
-import _ from 'lodash';
+import addScore from './module/addScore.js';
+import getData from './module/getData.js';
 
-import './style.css';
+document.querySelector('#submit').addEventListener('click', (e) => {
+  e.preventDefault();
+  addScore(document.querySelector('#name').value, Number(document.querySelector('#score').value));
+  document.querySelector('#name').value = '';
+  document.querySelector('#score').value = '';
+});
 
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+document.addEventListener('DOMContentLoaded', () => {
+  getData();
+});
