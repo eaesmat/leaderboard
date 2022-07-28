@@ -15,7 +15,7 @@
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://eaesmat.github.io/leaderboard/)
 
 
 ## Getting Started
